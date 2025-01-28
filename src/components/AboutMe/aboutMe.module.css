@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(
+    to top,
+    rgba(22, 199, 155, 0.684),
+    rgba(22, 22, 50, 0.95)
+  );
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  animation: fadeInContainer 1s ease-out;
+}
+
+.image {
+  border-radius: 10px;
+  max-width: 250px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.1);
+}
+
+.content {
+  max-width: 800px;
+}
+
+.header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  animation: fadeInText 1.5s ease-out;
+}
+
+.aboutMeText {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #f6f6f6;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeInText 2s ease-out 0.5s forwards;
+}
+
+.resumeButton {
+  padding: 12px 30px;
+  background-color: #16c79a;
+  border: none;
+  border-radius: 25px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  animation: bounceIn 0.6s ease-out;
+}
+
+.resumeButton:hover {
+  background-color: #13a27d;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.resumeButton:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.textAnimation {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: slideIn 1.5s ease-out;
+}
+
+@keyframes fadeInContainer {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
